@@ -90,24 +90,6 @@ Container.prototype.getSize = function () {
     return this.size;
 };
 
-/**
- * @access public
- * @return {string}
- */
-Container.prototype.getSizeHumanReadable = function () {
-    var units = ['bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
-
-    var size = this.getSize();
-    while (size > 1024) {
-        size = size / 1024;
-        units.shift();
-    }
-
-    size = (Math.round(size * 100) / 100);
-
-    return size + ' ' + units.shift();
-};
-
 Container.prototype.toString = function () {
     return JSON.stringify(this);
 };
