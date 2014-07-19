@@ -12,13 +12,20 @@ function Size(size)
 }
 
 /**
+ * @return {string[]}
+ */
+Size.prototype.getUnits = function () {
+    return ['bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+};
+
+/**
  * @return {string}
  */
 Size.prototype.getHumanReadable = function () {
-    var units = ['bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+    var units = this.getUnits();
 
     var size = this.size;
-    while (size > 1024) {
+    while (size > 1000) {
         size = size / 1024;
         units.shift();
     }
