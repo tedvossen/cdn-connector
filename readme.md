@@ -20,7 +20,6 @@ Usage
     <script src="//your-domain.tld/cdn-connector/cdn-jquery.js"></script>
     ```
 
-
 2. Instantiate the constructor for the desired cloud storage provider.
 
     ``` js
@@ -30,12 +29,11 @@ Usage
     );
     ```
 
-See [`Rackspace Cloud Files™ Developer Guide`](http://docs.rackspace.com/files/api/v1/cf-devguide/content/Service-Access-Endpoints-d1e003.html)
-for more information on regionalized API endpoints.
+    See [`Rackspace Cloud Files™ Developer Guide`](http://docs.rackspace.com/files/api/v1/cf-devguide/content/Service-Access-Endpoints-d1e003.html)
+    for more information on regionalized API endpoints.
 
-Note: the CDN Connector doesn't have authentication methods because of security
-considerations (use a cURL request, or similar, to fetch the token).
-
+    Note: the CDN Connector doesn't have authentication methods because of
+    security issues (use a cURL request, or similar, to fetch the token).
 
 3. Instantiate the CDN Connector.
 
@@ -51,7 +49,6 @@ considerations (use a cURL request, or similar, to fetch the token).
         $(element).listRootDirectories(cdn);
     });
     ```
-
 
 License
 -------
