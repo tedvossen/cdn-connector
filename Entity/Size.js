@@ -25,7 +25,7 @@ Size.prototype.getHumanReadable = function () {
     var units = this.getUnits();
 
     var size = this.size;
-    while (size > 1000) {
+    while (size >= 1000) {
         size = size / 1024;
         units.shift();
     }
